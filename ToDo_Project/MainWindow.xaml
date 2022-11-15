@@ -1,0 +1,40 @@
+﻿<Window x:Class="ToDo_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDo_Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="500"
+        Closing="On_Application_Exit">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.ColumnSpan="3" Grid.RowSpan="6"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Orientation="Vertical" 
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                        x:Name="ToDo_List">
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Grid.Row="6" Grid.Column="1"
+                FontSize="23" Click="Button_Click">
+            Add
+        </Button>
+    </Grid>
+</Window>
